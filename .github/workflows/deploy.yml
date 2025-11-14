@@ -1,0 +1,43 @@
+name: Deploy
+
+on:
+  push:
+    branches: ["main"]
+
+jobs:
+  sync-to-personal-repo:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source repository
+        uses: actions/checkout@v3
+
+      - name: Prepare output directory
+        run: |
+          rm -rf output
+          mkdir -p output
+          # .git, node_modules 등은 제외하고 복사했어요
+          rsync -av \
+            --exclude '.git' \
+            --exclude 'node_modules' \
+            ./ ./output/
+
+      - name: Push to personal repository
+        id: push_directory
+        uses: cpina/github-action-push-to-another-repository@main
+
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.AUTO_ACTIONS }}
+
+        with:
+          source-directory: "output"
+
+          destination-github-username: "jeonghoon11"
+          destination-repository-name: "37-COLLABORATION-WEB-TICKETBAY"
+
+          user-email: ${{ secrets.EMAIL }}
+          commit-message: ${{ github.event.head_commit.message }}
+          target-branch: "main"
+
+      - name: Check cloned directory
+        run: echo "$DESTINATION_CLONED_DIRECTORY"
