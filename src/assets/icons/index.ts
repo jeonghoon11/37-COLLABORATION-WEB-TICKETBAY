@@ -1,0 +1,46 @@
+// 아이콘 배럴 파일
+// 실제 아이콘이 생기면 아래처럼 개별 export 로 추가해서 사용하시면 됩니다.
+
+export { default as MusicalIcon } from "@assets/svg/icon_ musical.svg?react";
+export { default as CartIcon } from "@assets/svg/icon_cart.svg?react";
+export { default as CartSelectedIcon } from "@assets/svg/icon_cart_selected.svg?react";
+export { default as CategoryIcon } from "@assets/svg/icon_category.svg?react";
+export { default as CategorySelectedIcon } from "@assets/svg/icon_category_selected.svg?react";
+export { default as CheckIcon } from "@assets/svg/icon_check.svg?react";
+export { default as CheckSmallIcon } from "@assets/svg/icon_check_small.svg?react";
+export { default as ChevronBigLeftIcon } from "@assets/svg/icon_chevron_big_left.svg?react";
+export { default as ChevronBigRightIcon } from "@assets/svg/icon_chevron_big_right.svg?react";
+export { default as ChevronBigTopIcon } from "@assets/svg/icon_chevron_big_top.svg?react";
+export { default as ChevronSmallDownIcon } from "@assets/svg/icon_chevron_small_down.svg?react";
+export { default as ChevronSmallRightIcon } from "@assets/svg/icon_chevron_small_right.svg?react";
+export { default as ChevronSmallUpIcon } from "@assets/svg/icon_chevron_small_up.svg?react";
+export { default as CloseIcon } from "@assets/svg/icon_close.svg?react";
+export { default as CouponIcon } from "@assets/svg/icon_coupon.svg?react";
+export { default as DiscountIcon } from "@assets/svg/icon_discount.svg?react";
+export { default as FabIcon } from "@assets/svg/icon_fab.svg?react";
+export { default as GoodsIcon } from "@assets/svg/icon_goods.svg?react";
+export { default as HamburgermenuIcon } from "@assets/svg/icon_hamburgermenu.svg?react";
+export { default as HeartIcon } from "@assets/svg/icon_heart.svg?react";
+export { default as HeartActivateIcon } from "@assets/svg/icon_heart_activate.svg?react";
+export { default as HelpIcon } from "@assets/svg/icon_help.svg?react";
+export { default as HelpCircleIcon } from "@assets/svg/icon_help-circle.svg?react";
+export { default as HomeIcon } from "@assets/svg/icon_home.svg?react";
+export { default as HomeSelectedIcon } from "@assets/svg/icon_home_selected.svg?react";
+export { default as InfoIcon } from "@assets/svg/icon_info.svg?react";
+export { default as MessageIcon } from "@assets/svg/icon_message.svg?react";
+export { default as MessageAlarmIcon } from "@assets/svg/icon_message_alarm.svg?react";
+export { default as MickIcon } from "@assets/svg/icon_mick.svg?react";
+export { default as MovieIcon } from "@assets/svg/icon_movie.svg?react";
+export { default as MyIcon } from "@assets/svg/icon_my.svg?react";
+export { default as MySelectedIcon } from "@assets/svg/icon_my_selected.svg?react";
+export { default as OptionIcon } from "@assets/svg/icon_option.svg?react";
+export { default as PlusIcon } from "@assets/svg/icon_plus.svg?react";
+export { default as ResetIcon } from "@assets/svg/icon_reset.svg?react";
+export { default as SearchIcon } from "@assets/svg/icon_search.svg?react";
+export { default as SoundIcon } from "@assets/svg/icon_sound.svg?react";
+export { default as SportsIcon } from "@assets/svg/icon_sports.svg?react";
+export { default as TicketinSulationIcon } from "@assets/svg/icon_ticketin_sulation.svg?react";
+export { default as TicketregisterIcon } from "@assets/svg/icon_ticketregister.svg?react";
+export { default as TicketregisterSelectedIcon } from "@assets/svg/icon_ticketregister_selected.svg?react";
+export { default as ToggleIcon } from "@assets/svg/icon_toggle.svg?react";
+export { default as TravelIcon } from "@assets/svg/icon_travel.svg?react";

@@ -24,14 +24,15 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true,
 
-    "baseUrl": "."
-
-    // 절대경로 세팅 위치
-    // "paths": {
-    //   "@pages/*": ["src/pages/*"],
-    //   "@routes/*": ["src/routes/*"],
-    //   "@shared/*": ["src/shared/*"]
-    // }
+    /* Absolute Path */
+    "baseUrl": ".",
+    "paths": {
+      "@app/*": ["src/app/*"],
+      "@pages/*": ["src/pages/*"],
+      "@shared/*": ["src/shared/*"],
+      "@widgets/*": ["src/widgets/*"],
+      "@assets/*": ["src/assets/*"]
+    }
   },
   "include": ["src"]
 }
