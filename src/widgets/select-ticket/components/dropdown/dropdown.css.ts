@@ -3,6 +3,9 @@ import { recipe } from "@vanilla-extract/recipes";
 
 import { themeVars } from "@shared/styles/theme.css";
 
+// createPortal로 렌더링시 themeVars 사용 불가
+// 따라서 직접 값을 사용
+
 export const container = style({
   position: "relative",
   display: "flex",
@@ -66,40 +69,51 @@ export const dropdownList = style({
   display: "flex",
   flexDirection: "column",
   width: "21.5rem",
-  backgroundColor: themeVars.color.grayscale9,
-  border: `1px solid ${themeVars.color.grayscale7}`,
+  backgroundColor: "#FFFFFF", // grayscale9
+  border: "1px solid #E9ECEF", // grayscale7
   borderRadius: "14px",
   overflow: "hidden",
-  zIndex: themeVars.zIndex.dropdown,
+  zIndex: "4000",
+  pointerEvents: "auto",
+  boxShadow: "0 0.4rem 1.2rem rgba(0, 0, 0, 0.15)",
+  fontFamily: "'Pretendard Variable', sans-serif",
 });
 
 export const dropdownFirstItem = style({
+  position: "relative",
   display: "flex",
   alignItems: "center",
   gap: "0.4rem",
   padding: "0.9rem 1.8rem",
-  backgroundColor: themeVars.color.grayscale9,
-  borderBottom: `1px solid ${themeVars.color.grayscale7}`,
+  backgroundColor: "#FFFFFF", // grayscale9
+  borderBottom: "1px solid #E9ECEF", // grayscale7
   cursor: "pointer",
   width: "100%",
   height: "4.2rem",
+  zIndex: 1,
+  pointerEvents: "auto",
+  fontFamily: "'Pretendard Variable', sans-serif",
 });
 
 export const dropdownItemIcon = style({
-  color: themeVars.color.grayscale1,
+  color: "#000000", // grayscale1
 });
 
 export const dropdownItem = style({
+  position: "relative",
   display: "flex",
   alignItems: "center",
   gap: "0.4rem",
   padding: "1rem 2.7rem",
-  backgroundColor: themeVars.color.grayscale9,
+  backgroundColor: "#FFFFFF", // grayscale9
   border: "none",
-  borderBottom: `1px solid ${themeVars.color.grayscale7}`,
+  borderBottom: "1px solid #E9ECEF", // grayscale7
   cursor: "pointer",
   width: "100%",
   height: "4.2rem",
+  zIndex: 1,
+  pointerEvents: "auto",
+  fontFamily: "'Pretendard Variable', sans-serif",
   selectors: {
     "&:last-child": {
       borderBottom: "none",
@@ -108,6 +122,9 @@ export const dropdownItem = style({
 });
 
 export const dropdownItemLabel = style({
-  ...themeVars.fontStyles.body1_medium,
-  color: themeVars.color.grayscale1,
+  fontSize: "1.6rem", // body1_medium
+  fontWeight: "500", // medium
+  lineHeight: "140%", // normal
+  letterSpacing: "0", // none
+  color: "#000000", // grayscale1
 });

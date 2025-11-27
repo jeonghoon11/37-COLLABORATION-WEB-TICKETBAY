@@ -8,6 +8,7 @@ export const container = style({
   alignItems: "center",
   padding: "0.5rem 0",
   gap: "0.5rem",
+  cursor: "pointer",
 });
 
 export const label = style({

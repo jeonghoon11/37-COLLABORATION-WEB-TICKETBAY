@@ -15,7 +15,7 @@ const PERFORMANCE_DATE_DROPDOWN_ID = DROPDOWN_CONFIGS[0].label;
 const TicketList = () => {
   const navigate = useNavigate();
   const { eventId } = useParams();
-  const { selectedId } = useDropdownContext();
+  const { selectedId, isOpen } = useDropdownContext();
 
   const selectedDateId = selectedId(PERFORMANCE_DATE_DROPDOWN_ID);
 
@@ -27,7 +27,14 @@ const TicketList = () => {
 
   const tickets = ticketOptionData ?? [];
 
+  // 드롭다운이 열려있는지 확인
+  const hasOpenDropdown = DROPDOWN_CONFIGS.some((config) => isOpen(config.label));
+
   const handleCardClick = (id?: number) => {
+    // 드롭다운이 열려있으면 카드 클릭 무시
+    if (hasOpenDropdown) {
+      return;
+    }
     if (id) {
       navigate(ROUTE_PATH.TICKET_DETAIL.replace(":ticketId", String(id)));
     }

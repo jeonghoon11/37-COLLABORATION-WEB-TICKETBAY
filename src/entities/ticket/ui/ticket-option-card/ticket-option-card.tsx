@@ -31,8 +31,18 @@ const TicketOptionCard = ({
     setIsCompareButtonActive((prev) => !prev);
   };
 
+  const handleCardClick = (e: React.MouseEvent) => {
+    const target = e.target as HTMLElement;
+    if (target.closest("[data-dropdown-list]")) {
+      e.stopPropagation();
+      e.preventDefault();
+      return;
+    }
+    onClickCard?.();
+  };
+
   return (
-    <div className={styles.container} onClick={onClickCard}>
+    <div className={styles.container} onClick={handleCardClick}>
       <div className={styles.matchDateContainer}>
         <div className={styles.matchDateContent}>
           <p className={styles.matchDateContentTitle}>경기 일시</p>

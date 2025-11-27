@@ -7,13 +7,17 @@ const BOTTOM_SHEET_TRANSLATE_CSS_VAR = "--bottom-sheet-translate";
 const IMAGE_HEIGHT_REM = "27.1rem";
 
 export const base = style({
+  position: "fixed",
+  top: "10.9rem",
+  left: 0,
+  right: 0,
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
   width: "100%",
-  paddingTop: "10.9rem",
   touchAction: "none",
   pointerEvents: "none",
+  zIndex: themeVars.zIndex.background,
 });
 
 export const image = style({

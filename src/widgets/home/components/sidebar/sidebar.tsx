@@ -18,15 +18,25 @@ const Sidebar = ({ isOpen, onClose }: Props) => {
     if (isOpen) {
       setShouldRender(true);
       setIsClosing(false);
-      document.documentElement.style.overflowX = "hidden";
-      document.body.style.overflow = "hidden";
-      document.body.style.overflowX = "hidden";
     } else if (shouldRender && !isClosing) {
       setIsClosing(true);
     }
   }, [isOpen, shouldRender, isClosing]);
 
-  if (!shouldRender) return null;
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
+
+  if (!shouldRender) {
+    return null;
+  }
 
   const handleDimClick = () => {
     if (!isClosing) {
@@ -38,9 +48,6 @@ const Sidebar = ({ isOpen, onClose }: Props) => {
     if (e.currentTarget === e.target && isClosing) {
       setShouldRender(false);
       setIsClosing(false);
-      document.documentElement.style.overflowX = "";
-      document.body.style.overflow = "";
-      document.body.style.overflowX = "";
     }
   };
 
@@ -51,9 +58,7 @@ const Sidebar = ({ isOpen, onClose }: Props) => {
         onClick={handleDimClick}
       />
       <aside
-        className={
-          isClosing ? styles.sidebarContainerClosing : styles.sidebarContainer
-        }
+        className={isClosing ? styles.sidebarContainerClosing : styles.sidebarContainer}
         onAnimationEnd={handleAnimationEnd}
       >
         <header className={styles.sidebarHeader}>
@@ -66,18 +71,29 @@ const Sidebar = ({ isOpen, onClose }: Props) => {
             <span>로그인하세요</span>
             <ChevronSmallRightIcon width={20} height={20} />
           </button>
-          <button type="button" className={styles.menuItem}>MY</button>
-          <button type="button" className={styles.menuItem}>판매등록</button>
-          <button type="button" className={styles.menuItem}>PIN 번호함</button>
-          <button type="button" className={styles.menuItem}>1:1 문의하기</button>
-          <button type="button" className={styles.menuItem}>1:1 문의 내역</button>
-          <button type="button" className={styles.menuItem}>이용 가이드</button>
+          <button type="button" className={styles.menuItem}>
+            MY
+          </button>
+          <button type="button" className={styles.menuItem}>
+            판매등록
+          </button>
+          <button type="button" className={styles.menuItem}>
+            PIN 번호함
+          </button>
+          <button type="button" className={styles.menuItem}>
+            1:1 문의하기
+          </button>
+          <button type="button" className={styles.menuItem}>
+            1:1 문의 내역
+          </button>
+          <button type="button" className={styles.menuItem}>
+            이용 가이드
+          </button>
         </div>
       </aside>
     </div>,
-    document.body
+    document.body,
   );
 };
 
 export default Sidebar;
-

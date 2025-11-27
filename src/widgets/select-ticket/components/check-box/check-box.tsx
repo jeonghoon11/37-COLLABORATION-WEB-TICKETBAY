@@ -17,12 +17,10 @@ const CheckBox = ({ label }: Props) => {
   const Icon = isChecked ? CheckedBoxIcon : CheckBoxIcon;
 
   return (
-    <div className={styles.container}>
-      <button type="button" onClick={handleCheckBoxClick}>
-        <Icon width={14} height={14} className={styles.icon({ isChecked })} />
-      </button>
+    <button className={styles.container} onClick={handleCheckBoxClick}>
+      <Icon width={14} height={14} className={styles.icon({ isChecked })} />
       {label && <span className={styles.label}>{label}</span>}
-    </div>
+    </button>
   );
 };
 
