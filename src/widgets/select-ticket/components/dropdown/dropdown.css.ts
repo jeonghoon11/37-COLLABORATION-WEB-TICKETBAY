@@ -60,9 +60,9 @@ export const icon = recipe({
 });
 
 export const dropdownList = style({
-  position: "absolute",
-  top: "100%",
-  marginTop: "0.6rem",
+  position: "fixed",
+  top: "var(--dropdown-top, 0)",
+  left: "var(--dropdown-left, 0)",
   display: "flex",
   flexDirection: "column",
   width: "21.5rem",

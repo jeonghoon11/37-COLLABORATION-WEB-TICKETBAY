@@ -35,5 +35,4 @@ export const rootStyle = style({
   maxWidth: "var(--max-width)",
   backgroundColor: themeVars.color.grayscale9,
   boxShadow: `0 0.8rem 3.2rem ${themeVars.color.grayscale6}`,
-  overflow: "hidden",
 });

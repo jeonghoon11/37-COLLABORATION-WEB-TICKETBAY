@@ -5,8 +5,8 @@ export const queryClient = new QueryClient({
     queries: {
       retry: 1,
       refetchOnWindowFocus: true,
-      staleTime: 0,                 
-      gcTime: 1000 * 60 * 5,        
+      staleTime: 0,
+      gcTime: 1000 * 60 * 5,
     },
   },
 });

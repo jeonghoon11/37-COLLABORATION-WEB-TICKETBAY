@@ -4,13 +4,19 @@ import { themeVars } from "@shared/styles/theme.css";
 
 export const container = style({
   display: "flex",
+  position: "fixed",
+  top: "4.8rem",
+  zIndex: themeVars.zIndex.header,
   flexDirection: "column",
   alignItems: "center",
   justifyContent: "center",
   width: "100%",
+  minWidth: "var(--min-width)",
+  maxWidth: "var(--max-width)",
   height: "6.1rem",
   padding: "1rem 0",
   borderBottom: `1px solid ${themeVars.color.grayscale7}`,
+  backgroundColor: themeVars.color.grayscale9,
 });
 
 export const titleButton = style({

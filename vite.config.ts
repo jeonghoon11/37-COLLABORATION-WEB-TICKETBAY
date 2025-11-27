@@ -16,4 +16,7 @@ export default defineConfig({
     svgr(),
     tsconfigPaths(),
   ],
+  server: {
+    host: true,
+  },
 });

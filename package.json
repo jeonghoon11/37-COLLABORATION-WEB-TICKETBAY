@@ -10,10 +10,13 @@
     "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
     "lint:fix": "eslint . --ext .ts,.tsx,.js,.jsx --fix",
     "format": "prettier --write .",
-    "format:check": "prettier --check ."
+    "format:check": "prettier --check .",
+    "generate:types": "openapi-typescript https://api.serverzzz.p-e.kr/v3/api-docs/v1 -o ./src/shared/types/schema.d.ts"
   },
   "dependencies": {
     "@tanstack/react-query": "^5.90.10",
+    "@vercel/analytics": "^1.5.0",
+    "@vercel/speed-insights": "^1.2.0",
     "axios": "^1.13.2",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
@@ -42,6 +45,7 @@
     "eslint-plugin-react-refresh": "^0.4.24",
     "eslint-plugin-simple-import-sort": "^12.1.1",
     "globals": "^16.5.0",
+    "openapi-typescript": "^7.10.1",
     "prettier": "^3.6.2",
     "typescript": "~5.9.3",
     "typescript-eslint": "^8.46.4",

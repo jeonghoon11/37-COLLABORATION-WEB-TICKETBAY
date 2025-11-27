@@ -12,7 +12,7 @@ export interface DropdownContextValue {
   isOpen: (id: string) => boolean;
   selectedId: (id: string) => string | null;
   selectOption: (dropdownId: string, optionId: string | null) => void;
-  registerRef: (id: string, element: HTMLElement | null) => void;
+  setDropdownRef: (id: string, element: HTMLElement | null) => void;
 }
 
 export const DropdownContext = createContext<DropdownContextValue | null>(null);

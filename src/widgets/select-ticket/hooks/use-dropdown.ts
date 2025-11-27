@@ -51,7 +51,7 @@ export const useDropdown = () => {
   /**
    * 드롭다운의 ref를 등록합니다.
    */
-  const registerRef = (id: string, element: HTMLElement | null) => {
+  const setDropdownRef = (id: string, element: HTMLElement | null) => {
     dropdownRefs.current[id] = element;
   };
 
@@ -78,6 +78,6 @@ export const useDropdown = () => {
     isOpen,
     selectedId,
     selectOption,
-    registerRef,
+    setDropdownRef,
   };
 };

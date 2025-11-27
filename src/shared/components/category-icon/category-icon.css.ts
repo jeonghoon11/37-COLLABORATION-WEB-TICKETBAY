@@ -16,6 +16,9 @@ export const container = style({
 export const text = recipe({
   base: {
     ...themeVars.fontStyles.caption2_regular,
+    textAlign: "center",
+    width: "100%",
+    whiteSpace: "nowrap",
   },
   variants: {
     isActive: {
